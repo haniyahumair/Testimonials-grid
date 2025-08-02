@@ -1,0 +1,35 @@
+:root{
+    --font: 'Barlow' sans-serif;
+    --Purple-50: hsl(260, 100%, 95%);
+    --Purple-300: hsl(264, 82%, 80%);
+    --Purple-500: hsl(263, 55%, 52%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Gray-100: hsl(0, 0%, 98%);
+    --Gray-200: hsl(0, 0%, 90%);
+    --Grey-400: hsl(224, 10%, 45%);
+    --Grey-500: hsl(217, 19%, 35%);
+    --Dark-blue: hsl(219, 29%, 14%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    background-color: var(--Gray-100);
+    color: var(--Grey-500);
+}
+
+main{
+    background-color: var(--White);
+    display: grid;
+}
+
+.testimonials-cards, .card{
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.card{
+    border: 2px solid black;
+}
