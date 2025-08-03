@@ -16,20 +16,52 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font);
-    background-color: var(--Gray-100);
+    background-color: var(--Gray-200);
     color: var(--Grey-500);
 }
 
-main{
-    background-color: var(--White);
-    display: grid;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
 }
 
-.testimonials-cards, .card{
-    margin-bottom: 20px;
-    padding: 20px;
+.testimonials-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "daniel-card daniel-card jonathan-card kira-card"
+        "jeanette-card patrick-card patrick-card kira-card";
+    gap: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; 
+}
+
+#daniel-card{
+    grid-area: daniel-card;
+}
+
+#jonathan-card{
+    grid-area: jonathan-card;
+}
+
+#kira-card{
+    grid-area: kira-card;
+}
+
+#jeanette-card{
+    grid-area: jeanette-card;
+}
+
+#patrick-card{
+    grid-area: patrick-card;
 }
 
 .card{
-    border: 2px solid black;
+    border: 1px solid var(--Black);
+    overflow: hidden; 
+    min-height: 200px;
 }
