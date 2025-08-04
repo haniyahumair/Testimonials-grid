@@ -1,5 +1,5 @@
 :root{
-    --font: 'Barlow' sans-serif;
+    --font: 'Barlow', sans-serif;
     --Purple-50: hsl(260, 100%, 95%);
     --Purple-300: hsl(264, 82%, 80%);
     --Purple-500: hsl(263, 55%, 52%);
@@ -17,14 +17,14 @@ body {
     padding: 0;
     font-family: var(--font);
     background-color: var(--Gray-200);
-    color: var(--Grey-500);
+    color: var(--White);
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem;
+    margin: 8rem 3rem;
 }
 
 .testimonials-cards{
@@ -36,32 +36,77 @@ main {
         "jeanette-card patrick-card patrick-card kira-card";
     gap: 2rem;
     max-width: 1200px;
-    width: 90%;
+    width: 95%;
     margin: 0 auto; 
 }
 
 #daniel-card{
     grid-area: daniel-card;
+    background-color: var(--Purple-500);
 }
 
 #jonathan-card{
     grid-area: jonathan-card;
+    background-color: var(--Grey-400);
 }
 
 #kira-card{
     grid-area: kira-card;
+    background-color: var(--White);
+    color: var(--Grey-500);
 }
 
 #jeanette-card{
     grid-area: jeanette-card;
+    background-color: var(--White);
+    color: var(--Grey-500);
 }
 
 #patrick-card{
     grid-area: patrick-card;
+    background-color: var(--Dark-blue);
 }
 
 .card{
-    border: 1px solid var(--Black);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
     overflow: hidden; 
-    min-height: 200px;
+    min-height: 170px;
+}
+
+#daniel-card header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.name-status{
+    margin: 0;
+    padding: 0;
+}
+
+.name-status p{
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    letter-spacing: 0.2px;
+    font-size: 1rem;
+}
+
+.name-status .status{
+    font-family: 0.5rem;
+}
+
+header .profile-image img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.quotes-icon{
+    width: 200px;
+    padding-left: 6rem;
+    margin-top: 0;
 }
