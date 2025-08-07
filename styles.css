@@ -18,28 +18,29 @@ body {
     font-family: var(--font);
     background-color: var(--Gray-200);
     color: var(--White);
-}
-
-main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 8rem 3rem;
-}
+    padding: 10rem 7rem;
 
+}
 .testimonials-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas: 
         "daniel-card daniel-card jonathan-card kira-card"
         "jeanette-card patrick-card patrick-card kira-card";
-    gap: 2rem;
-    max-width: 1200px;
-    width: 95%;
+    gap: 1.5rem;
+    max-width: 1110px;
+    width: 100%;
     margin: 0 auto; 
+    align-items: start;
 }
 
+
+/*Grid Areas*/
 #daniel-card{
     grid-area: daniel-card;
     background-color: var(--Purple-500);
@@ -67,19 +68,25 @@ main {
     background-color: var(--Dark-blue);
 }
 
+/* Card Styling*/
 .card{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    overflow: hidden; 
-    min-height: 170px;
+    padding: 2.5rem 0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;  
+    height: fit-content;
 }
 
-#daniel-card header{
+.card-header{
     display: flex;
     align-items: center;
     gap: 1rem;
+    z-index: 2;
+    position: relative;
+
 }
 
 .name-status{
@@ -87,26 +94,68 @@ main {
     padding: 0;
 }
 
-.name-status p{
+.name{
     margin: 0;
+    margin-bottom: 0.1rem;
     padding: 0;
-    font-weight: 200;
+    font-weight: 600;
     letter-spacing: 0.2px;
-    font-size: 1rem;
+    font-size: 15px;
 }
 
-.name-status .status{
-    font-family: 0.5rem;
+ .status{
+    font-family: 11px;
+    margin-top: 0;
+    font-weight: 400;
 }
 
 header .profile-image img{
     width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.quotes-icon{
-    width: 200px;
-    padding-left: 6rem;
-    margin-top: 0;
+.profile-image{
+    padding-left: 30px;
+    margin-right: 0.5rem;
+
+}
+/* Quote Icon for Daniel's Card */
+#daniel-card .quotes-icon {
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    z-index: 1;
+  }
+
+#daniel-card .quotes-icon img {
+    width: 100px;
+    opacity: 0.9;
+  }
+
+/* Testimonial Text */
+.testimonial-text {
+    z-index: 2;
+    position: relative;
+  }
+
+  .statement {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .quote {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0.7;
+    font-weight: 500;
+  }
+
+  /* White card profile images get different border */
+#kira-card .profile-image img,
+#jeanette-card .profile-image img {
+  border: 2px solid var(--Grey-400);
 }
