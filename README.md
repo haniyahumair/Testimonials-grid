@@ -1,9 +1,7 @@
 # Frontend Mentor - Testimonials grid section
 
-![Design preview for the Testimonials grid section coding challenge](./preview.jpg)
+<img width="1261" height="675" alt="image" src="https://github.com/user-attachments/assets/6d97d8c9-02d1-45c3-bf4d-dcb3099c2705" />
 
 ## Welcome! 👋
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
-
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+[Frontend Mentor](https://www.frontendmentor.io)
